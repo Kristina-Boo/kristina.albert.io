@@ -1,7 +1,7 @@
-let a = 9;
+/*let a = 9;
 let b = 2;
 let rezult = a % b;
-alert(rezult);
+alert(rezult);*/
 
 let num = 1;
 num += 5;
