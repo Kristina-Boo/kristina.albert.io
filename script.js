@@ -14,10 +14,13 @@ alert(num);
 
 
 let age = Number (prompt('Сколько вам лет?'));
-alert(age);*/
+alert(age);
 
 const user = {
     name: String('Вася'),
     age: Number(35),
     isAdmin: Boolean(1)
-}
+}*/
+
+let name = prompt("Как вас зовут?");
+alert(`Привет, ${name}!`);
