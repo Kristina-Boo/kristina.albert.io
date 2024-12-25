@@ -1,2 +1,2 @@
-let a = 20;
-alert(a);
+const firstIphone = 2007
+alert(firstIphone)
