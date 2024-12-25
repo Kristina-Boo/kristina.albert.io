@@ -10,8 +10,14 @@ num *= 7;
 num /= 3;
 num++;
 num--;
-alert(num);*/
+alert(num);
 
 
 let age = Number (prompt('Сколько вам лет?'));
-alert(age);
+alert(age);*/
+
+const user = {
+    name: String('Вася'),
+    age: Number(35),
+    isAdmin: Boolean(1)
+}
