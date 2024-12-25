@@ -1,2 +1,2 @@
-const firstIphone = 2007
-alert(firstIphone)
+const creatorJs = 'Brendan Eich';
+alert(creatorJs);
