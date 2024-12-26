@@ -39,10 +39,10 @@ a {
 .top {
   height: 800px;
   width: 100%;
-  background: url(img/starsgreen1.svg), url(img/starsgreen2.svg), url(img/big-star.svg), url(img/greentop.png);
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-  background-size: 128px 62px, 148px 113px, contain, cover;
-  background-position: left 63px top 69px, bottom 149px right 344px, right, center;
+  background: url(img/starsgreen1.svg), url(img/starsgreen2.svg), url(img/big-star.svg), rgb(225, 255, 143);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 128px 62px, 148px 113px, contain;
+  background-position: left 63px top 69px, bottom 149px right 344px, right;
 }
 
 .top-welcome {
@@ -114,7 +114,7 @@ a {
 }
 
 .game-block {
-  background: url(img/blackstars.svg), url(img/bigblackstar.svg), url(img/blackback.png);
+  background: url(img/blackstars.svg), url(img/bigblackstar.svg), rgb(32, 32, 39);
   background-size: 71px 108px, 584.72px 584.72px, cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top 770px left 25px, top 70px right -143px, center;
@@ -222,10 +222,10 @@ a {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    background: url(img/starsgreen1.svg), url(img/starsgreen2.svg), url(img/mobilbigstartop.svg), url(img/greentop.png);
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-size: 100px 67px, 100px 77px, 223px 228px, cover;
-    background-position: left 37px top 64px, bottom 79px right 34px, right top, center;
+    background: url(img/starsgreen1.svg), url(img/starsgreen2.svg), url(img/mobilbigstartop.svg), rgb(225, 255, 143);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100px 67px, 100px 77px, 223px 228px;
+    background-position: left 37px top 64px, bottom 79px right 34px, right top;
   }
   .top-welcome {
     padding-top: 147px;
@@ -268,5 +268,8 @@ a {
     width: 850px;
     height: 51.34px;
     position: absolute;
+  }
+  .game-block {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

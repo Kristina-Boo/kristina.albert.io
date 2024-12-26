@@ -9,10 +9,10 @@
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: flex-end;
-        background: url(img/starsgreen1.svg), url(img/starsgreen2.svg), url(img/mobilbigstartop.svg), url(img/greentop.png);
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-size: 100px 67px, 100px 77px, 223px 228px, cover;
-    background-position: left 37px top 64px, bottom 79px right 34px, right top, center;
+        background: url(img/starsgreen1.svg), url(img/starsgreen2.svg), url(img/mobilbigstartop.svg), rgb(225, 255, 143);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 100px 67px, 100px 77px, 223px 228px;
+        background-position: left 37px top 64px, bottom 79px right 34px, right top;
     }
     .top-welcome {
         padding-top: 147px;
