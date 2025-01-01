@@ -48,6 +48,7 @@
         }
     }
     .ticker {
+        //display: none;
         margin-top: 131px;
         font-size: 16px;
         align-items: center;
@@ -57,6 +58,6 @@
         position: absolute;
     }
     .game-block {
-        display: block;
+        display: none;
     }
 }
