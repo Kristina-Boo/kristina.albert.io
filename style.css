@@ -270,6 +270,6 @@ a {
     position: absolute;
   }
   .game-block {
-    display: block;
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
