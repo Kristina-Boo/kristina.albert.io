@@ -35,7 +35,6 @@ a {
 }
 .top {
     height: 800px;
-    width: 100%;
     background: url(img/starsgreen1.svg), url(img/starsgreen2.svg), url(img/big-star.svg), rgb(225, 255, 143);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 128px 62px, 148px 113px, contain;
@@ -45,7 +44,7 @@ a {
     
 }
 .top-welcome {
-    width: 768px;
+    //width: 768px;
     height: 358px;
     padding-top: 196px;
     display: flex;
