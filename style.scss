@@ -3,7 +3,6 @@
     padding: 0;
 }
 h1 {
-    color: rgb(32, 32, 39);
 font-family: Montserrat;
 font-size: 64px;
 font-weight: 700;
@@ -44,8 +43,6 @@ a {
     
 }
 .top-welcome {
-    //width: 768px;
-    height: 358px;
     padding-top: 196px;
     display: flex;
     flex-direction: column;
@@ -61,6 +58,7 @@ a {
         font-weight: 600;
         width: 247px;
         height: 66px;
+        transition: 3s;
         &:hover {
             background: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
@@ -68,8 +66,6 @@ a {
     }   
 }
 .top-box {
-   width: 768px;
-   height: 244px;
    display: flex;
    flex-direction: column;
    gap: 24px;
@@ -116,18 +112,19 @@ a {
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: top 770px left 25px, top 70px right -143px, center;
     height: 1470px;
-    padding-top: 94px;  
-    padding-bottom: 50px;
+    // padding-top: 94px;  
+    // padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    //gap: 72px;
 
-    &__about {
-      height: 198px; 
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+    //&__about {
+    //  height: 198px; 
+    //  display: flex;
+    //  flex-direction: column;
+    //  gap: 24px;
+    //  padding-top: 94px;
+    //}
 
     &__title {
         color: rgb(255, 255, 255);
@@ -136,6 +133,7 @@ a {
         font-weight: 700;
         line-height: 78px;
         text-align: left;
+        padding-top: 94px;
     }
 
     &__info {
@@ -145,12 +143,15 @@ a {
         font-weight: 400;
         line-height: 32px;
         text-align: left;
+        padding-top: 24px;
     }
 }
 .card-box {
     display: flex;
     gap: 32px;
     justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 72px;
 }
 .card-box__column {
     display: flex;
@@ -166,6 +167,7 @@ a {
     border-radius: 30px;
     box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
     background: rgb(255, 255, 255);
+    transition: 1s;
     &:hover {
         transform: scale(1.1);
     }
@@ -206,5 +208,67 @@ a {
 }
 .card-middle {
     height: 512px;
+}
+.minigames {
+    height: 3500px;
+    background: url(img/stars1.svg), url(img/stars2.svg), #202027;
+    background-size: 113px 103px, 139px 89px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 44.91px top 93px, right 52px bottom 45px;
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        color: #FFFFFF;
+        padding-top: 46px;
+        padding-bottom: 72px;
+    }
+}
+.game-box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.game {
+    width: 1200px;
+    height: 500px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+}
+.card-left {
+    justify-content: space-between;
+}
+.game-info {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    &__subtitle {
+        width: 450px;
+    }
+    &__description {
+        padding-top: 24px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        padding-bottom: 36px;
+        width: 400px;
+        font-family: Montserrat;
+    }
+    &__play {
+        width: 247px;
+        height: 66px;
+        border-radius: 60px;
+        background: #202027;
+        color: #FFFFFF;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        transition: 3s;  
+    }
+}
+.game-info__play:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 @import 'mobil';
