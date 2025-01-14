@@ -235,9 +235,9 @@ a {
     display: flex;
     flex-direction: row;
     border-radius: 30px;
-}
-.card-left {
-    justify-content: space-between;
+    &__left {
+        justify-content: space-between;
+    }
 }
 .game-info {
     padding: 48px;
@@ -270,5 +270,16 @@ a {
 .game-info__play:hover {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+}
+footer {
+    height: 150px;
+    background: #BDED35;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 @import 'mobil';

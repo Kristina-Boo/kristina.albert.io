@@ -231,8 +231,7 @@ a {
   flex-direction: row;
   border-radius: 30px;
 }
-
-.card-left {
+.game__left {
   justify-content: space-between;
 }
 
@@ -268,6 +267,17 @@ a {
 .game-info__play:hover {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+}
+
+footer {
+  height: 150px;
+  background: #BDED35;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 767px) {
