@@ -150,8 +150,6 @@ a {
 }
 
 .card {
-  width: 378px;
-  height: 473px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -285,8 +283,8 @@ footer {
 
 @media (max-width: 767px) {
   .center {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .top {
     display: flex;
@@ -313,22 +311,18 @@ footer {
     gap: 36px;
   }
   .top-box {
-    width: 296px;
-    height: 280px;
     display: flex;
     align-content: flex-start;
     justify-content: center;
     gap: 24px;
   }
   .top-box__hello {
-    width: 100%;
     font-size: 40px;
     font-weight: 700;
     line-height: 49px;
     text-align: center;
   }
   .top-box__info {
-    width: 100%;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -348,7 +342,6 @@ footer {
     display: none;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
   }
   .minigames {
     font-size: 40px;
