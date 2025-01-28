@@ -1,185 +1,239 @@
-// Домашка 5
+// Домашка 6
+// Задание 1
+// Дан массив: 
+// [1, 5, 4, 10, 0, 3].
 
-//Задание 1
-function minNumber(a, b) {
-    if (a < b) {
-      return a;
+// Создайте цикл, который будет выводить элементы массива до тех пор, пока не встретит значение 10. После вывода значения 
+// 10 в консоль цикл должен прекратить свою работу.
+
+const numbs = [1, 5, 4, 10, 0, 3];
+for (let i = 0; i < numbs.length; i++) {
+    console.log(numbs[i]);
+    if (numbs[i] === 10) {break;
+    }  
+}
+
+// Задание 2
+// Дан массив: 
+// [1, 5, 4, 10, 0, 3].
+
+// Найдите индекс значения 4 в этом массиве.
+ 
+const arr = [1, 5, 4, 10, 0, 3];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 4) {
+        console.log(i);
+        break;  
     } 
-    else if (a = b) {
-      return a;
-    }
-    else {
-      return b;
-    }
 }
-// let rezult = minNumber(8, 4)
-// console.log(rezult);
-let rezult = minNumber(6, 6)
-console.log(rezult);
 
-//Задание 2
-function isEven(a) {
-    if (a % 2 === 0){
-        return 'Число чётное'
-    }
-    else {
-        return 'Число нечётное'
-    }   
-}
-console.log(isEven(33));
-console.log(isEven(42));
-
-const isOdd = (n) => (n % 2 === 0) ? 'Число четное' : 'Число нечётное';
-console.log(isOdd(33));
-console.log(isOdd(42));
-
+const arr = [1, 5, 10, 0, 4, 3];
+console.log(arr.indexOf(4));
 
 // Задание 3
-function square(number) {
-    console.log(number ** 2); 
+// Дан массив чисел: 
+// [1, 3, 5, 10, 20].
+
+// С помощью метода 
+// join выведите элементы массива через пробел (пустую строку 
+// ' ').
+
+const arr = [1, 3, 5, 10, 20];
+console.log(arr.join(' '));
+
+// Задание 4
+// С помощью вложенных циклов создайте многомерный массив вида: 
+// [[1, 1, 1], [1, 1, 1], [1, 1, 1]].
+
+let arr = [];
+
+for (let i = 0; i < 3; i++) {
+    const arr2 = [];
+    for (let i = 0; i < 3; i++){
+        arr2.push(1)
+    }
+    arr.push(arr2);
 }
-square(5);
-const up = (n) => n ** 2;
-console.log(up(5));
-
-
-//Задание 4
-function checkAge() {
-    let age = +(prompt('Сколько вам лет?'));
-    
-    if (age < 0) {
-        alert('Вы ввели неправильное значение');
-    }
-
-    else if (age >= 0 && age <= 12) {
-        alert('Привет, друг!');
-    }
-    
-    else{
-        alert('Добро пожаловать!'); 
-    }
-}
-checkAge();
+console.log(arr);
 
 // Задание 5
-// Напишите функцию, которая принимает на вход два числа, а далее следует алгоритму:
+// Дан массив: [1, 1, 1]. Добавьте в конец массива значения 2, 2, 2.
+let arr = [1, 1, 1];
 
-// Проверяет, являются ли переданные параметры корректными числами.
-// Подсказка: используйте преобразование типов и 
-// isNaN().
-
-// Если нет — возвращает строку 
-// 'Одно или оба значения не являются числом'.
-// Если оба параметра — числа, то возвращает произведение данных чисел.
-function multiplyNumbers(a, b) {
-    if (isNaN(a) || isNaN(b)) {
-        return 'Одно или оба значения не являются числом';
-    } 
-    else {
-        return a * b;    
-    }
-}
-console.log(multiplyNumbers(25, 3));
-
-
+arr.push(2, 2, 2);
+console.log(arr);
 
 // Задание 6
-// Напишите функцию, которая выполняет следующий алгоритм:
+// Дан массив: 
+// [9, 8, 7, 'a', 6, 5].
 
-// Запрашивает у пользователя число.
-// Проверяет, является ли введенное значение числом.
-// Если значение не является числом, возвращает строку 
-// 'Переданный параметр не является числом'
-// .
-// Если значение является числом, возвращает строку 
-// 'n в кубе равняется <получившееся значение>'
-// , где 
-// n
-//  — введенное число, а 
-// <получившееся значение>
-//  — число, возведенное в куб.
-// Проверьте работу функции с числами от 
-// 0
-//  до 
-// 10
-// .
-function cubeNumber() {
-let num = prompt('Введите число')
-    if (isNaN(num)) {
-    alert('Переданный параметр не является числом');
-    }
-    else {
-    return ('${num} в кубе равняется ${n ** 3}');
-    }
-}
-console.log(cubeNumber(4));
+// С помощью метода sort
+// отсортируйте массив и удалите букву 'a'
+// из массива. Затем выведите массив.
+
+const arr =  [9, 8, 7, 'a', 6, 5];
+let array = arr.sort((a, b) => a - b);
+const newArray = array.filter(item => item !== 'a');
+console.log(newArray);
 
 // Задание 7
-// Создайте два объекта, circle1 и circle2, каждый из 
-// которых имеет свойство radius.
-// Оба объекта должны иметь:
-// Метод getArea, который возвращает площадь круга, 
-// вычисляемую через радиус.
-// Метод getPerimeter, который возвращает периметр
-// окружности.
-function getArea(radius) {
-    return (Math.PI * this.radius ** 2);
+// Дан массив: [9, 8, 7, 6, 5].
+
+// Попросите пользователя угадать число с помощью метода prompt.
+//  Если значение, которое ввел пользователь, есть в массиве, выведите 
+//  в alert «Угадал», в противном случае — «Не угадал».
+
+
+const arr = [9, 8, 7, 6, 5];
+let num = +prompt('Угадай число');
+
+if (arr.includes(num)) {
+alert('Угадал');
+}
+else {
+    alert('Не угадал');
+}
+
+// Задание 8
+// Дана строка: 'abcdef'. Выведите в консоль 'fedcba'.
+
+// Для этого задания вам пригодится метод 
+// reverse(). Он располагает элементы массива в порядке, обратном исходному.
+
+function reverseWord(word) {
+    // разделяем строку на массив
+    const wordArr = word.split('');
+    // переворачиаем массив в обратном пордке
+    wordArr.reverse('');
+    // собираем слово наоборот из массива
+    const reversedWord = wordArr.join('');  
+    return reversedWord;
+}
+let userWord = 'vhjvhjmjh';
+console.log(reverseWord(userWord));
+
+let word = 'abcdef';
+word = word.split('');
+console.log(word);
+word.reverse();
+word = word.join('');
+console.log(word);
+
+
+// Задание 9
+// Дан массив: 
+// [[1, 2, 3],[4, 5, 6]]. 
+// Выведите в консоль массив вида: 
+// [1, 2, 3, 4, 5, 6].
+
+const arr = [[1, 2, 3],[4, 5, 6]];
+const newArr = [];
+ 
+for (let i = 0; i < arr.length; i++) {
+    newArr.push(...arr[i]);
+}
+console.log(newArr);
+
+const arr = [[1, 2, 3],[4, 5, 6]];
+console.log(arr.flat());
+
+// Задание 10
+// Создайте массив с произвольными числами (диапазон от 
+// 1
+//  до 
+// 10
+// ).
+// Переберите его с помощью цикла 
+// for
+// .
+// В каждой итерации выведите в консоль сумму текущего и следующего элементов массива.
+// Следующий элемент массива можно получить с помощью индекса: 
+// i + 1
+// . Обратите внимание, что у последнего элемента нет следующего.
+
+
+// Критерии оценки
+// Подсказка
+// Используйте цикл 
+// for
+//  для перебора элементов и вычисления суммы. Учтите, что для последнего элемента нет последующего!
+
+const arr = [2, 9, 5, 7, 10];
+for (let i = 0; i < arr.length; i++) {
+    // const summ = arr[i] + arr[i + 1];
+    // console.log(summ);
+    if (arr[i + 1]){
+    console.log(arr[i] + arr[i + 1]);
     }
-function getPerimeter(radius) {
-    return (2 * Math.PI * this.radius);
 }
 
-const circle1 = {
-    radius: 10,
-    methodGetArea: getArea,
-    methodGetPerimeter: getPerimeter,
+// Задание 11
+// Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив квадратов этих чисел.
+function square(arr) {
+  return arr.map(item => item ** 2);
+}
+console.log(square([1, 2, 3]));
+
+// Задание 12
+// Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.
+
+function strLenght(arr) {
+    return arr.map(item => item.length);
+}
+console.log(strLenght(['Биба', 'и', 'Боба']));
+
+// Задание 13
+// Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив, содержащий только отрицательные значения.
+
+
+// Критерии оценки
+// Подсказка
+// Используйте метод 
+// filter()
+//  для создания нового массива на основе условия проверки отрицательности числа.
+
+function negativeValue(arr) {
+  return arr.filter(item => item < 0);
+}
+console.log(negativeValue([1, -5, 2, 3, -356]));
+
+// Задание 14
+// Создайте массив, состоящий из 10 значений. Значения массива необходимо сгенерировать с помощью метода 
+// Math.random()
+//  в диапазоне от 0 до 10.
+
+// В данном массиве найдите все четные значения и добавьте их в новый массив. Результат работы программы необходимо вывести в консоль — это будут два массива: исходный массив и массив с четными значениями.
+
+function randomNumb() {
+    return Math.floor(Math.random() * 10);
 }
 
-const circle2 = {
-    r: 8,
-    methodGetArea: getArea,
-    methodGetPerimeter: getPerimeter,
+let arr = [];
+for (let i = 0; i < 10; i++) {
+    arr.push(randomNumb());    
 }
-console.log(circle1.methodGetArea());
-console.log(circle2.methodGetArea());
-console.log(circle1.methodGetPerimeter());
-console.log(circle2.methodGetPerimeter());
-
-
-
-//Тенировка this
-function getRectangleArea() {
-    return this.width * this.height;
- }
- function getRectanglePerimeter() {
-    return this.width * 2 + this.height * 2;
- }
-const square1 = {
-    width: 22,
-    height: 11,
-    getArea: getRectangleArea,
-    getPerimeter: getRectanglePerimeter,
-}
-const square2 = {
-    width: 47,
-    height: 12,
-    getArea: getRectangleArea,
-    getPerimeter: getRectanglePerimeter,
-}
-console.log(square1.getArea());
-console.log(square1.getPerimeter());
-console.log(square2.getArea());
-console.log(square2.getPerimeter());
-
-
-
-//Задание из функции-  методы объектов
-const user = {
-    name: "Вова",
-    age: "38",
-    city: "Бильбао",
-    getInfo() {
-        return `Пользователь ${user.name}, возраст ${user.age} проживает в городе ${user.city}`;
+let evenArr = [];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+    evenArr.push(arr[i]);
     }
-}    
-console.log(user.getInfo());
+}
+console.log(evenArr);
+
+// Задание 15
+// Создайте массив, состоящий из 6 элементов. Элементы массива необходимо сгенерировать с помощью 
+// Math.random()
+//  в диапазоне от 1 до 10.
+
+// Требуется найти среднее арифметическое этих цифр, результат программы вывести в консоль.
+function randomNumb() {
+    return Math.floor(Math.random() * 10);
+}
+let arr = [];
+for (let i = 0; i < 6; i++) {
+    arr.push(randomNumb());    
+} 
+console.log(arr);  
+let sum = arr.reduce((total, num) => total + num);
+let average = sum / arr.length;
+console.log(average); 
