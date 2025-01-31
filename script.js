@@ -27,8 +27,8 @@ for (let i = 0; i < arr.length; i++) {
     } 
 }
 
-const arr = [1, 5, 10, 0, 4, 3];
-console.log(arr.indexOf(4));
+const arr16 = [1, 5, 10, 0, 4, 3];
+console.log(arr16.indexOf(4));
 
 // Задание 3
 // Дан массив чисел: 
@@ -38,30 +38,30 @@ console.log(arr.indexOf(4));
 // join выведите элементы массива через пробел (пустую строку 
 // ' ').
 
-const arr = [1, 3, 5, 10, 20];
-console.log(arr.join(' '));
+const arr1 = [1, 3, 5, 10, 20];
+console.log(arr1.join(' '));
 
 // Задание 4
 // С помощью вложенных циклов создайте многомерный массив вида: 
 // [[1, 1, 1], [1, 1, 1], [1, 1, 1]].
 
-let arr = [];
+let arr2 = [];
 
 for (let i = 0; i < 3; i++) {
-    const arr2 = [];
+    const arr3 = [];
     for (let i = 0; i < 3; i++){
-        arr2.push(1)
+        arr3.push(1)
     }
-    arr.push(arr2);
+    arr2.push(arr3);
 }
 console.log(arr);
 
 // Задание 5
 // Дан массив: [1, 1, 1]. Добавьте в конец массива значения 2, 2, 2.
-let arr = [1, 1, 1];
+let arr4 = [1, 1, 1];
 
-arr.push(2, 2, 2);
-console.log(arr);
+arr4.push(2, 2, 2);
+console.log(arr4);
 
 // Задание 6
 // Дан массив: 
@@ -71,8 +71,8 @@ console.log(arr);
 // отсортируйте массив и удалите букву 'a'
 // из массива. Затем выведите массив.
 
-const arr =  [9, 8, 7, 'a', 6, 5];
-let array = arr.sort((a, b) => a - b);
+const arr5 =  [9, 8, 7, 'a', 6, 5];
+let array = arr5.sort((a, b) => a - b);
 const newArray = array.filter(item => item !== 'a');
 console.log(newArray);
 
@@ -84,10 +84,10 @@ console.log(newArray);
 //  в alert «Угадал», в противном случае — «Не угадал».
 
 
-const arr = [9, 8, 7, 6, 5];
+const arr6 = [9, 8, 7, 6, 5];
 let num = +prompt('Угадай число');
 
-if (arr.includes(num)) {
+if (arr6.includes(num)) {
 alert('Угадал');
 }
 else {
@@ -99,25 +99,15 @@ else {
 
 // Для этого задания вам пригодится метод 
 // reverse(). Он располагает элементы массива в порядке, обратном исходному.
-
-function reverseWord(word) {
-    // разделяем строку на массив
-    const wordArr = word.split('');
-    // переворачиаем массив в обратном пордке
-    wordArr.reverse('');
-    // собираем слово наоборот из массива
-    const reversedWord = wordArr.join('');  
-    return reversedWord;
-}
-let userWord = 'vhjvhjmjh';
-console.log(reverseWord(userWord));
-
 let word = 'abcdef';
-word = word.split('');
-console.log(word);
-word.reverse();
-word = word.join('');
-console.log(word);
+console.log(word.join(reverse(split(''))));
+
+// let word = 'abcdef';
+// word = word.split('');
+// console.log(word);
+// word.reverse();
+// word = word.join('');
+// console.log(word);
 
 
 // Задание 9
@@ -126,16 +116,17 @@ console.log(word);
 // Выведите в консоль массив вида: 
 // [1, 2, 3, 4, 5, 6].
 
-const arr = [[1, 2, 3],[4, 5, 6]];
+const arr7 = [[1, 2, 3],[4, 5, 6]];
 const newArr = [];
  
-for (let i = 0; i < arr.length; i++) {
-    newArr.push(...arr[i]);
+for (let i = 0; i < arr7.length; i++) {
+    newArr.push(...arr7[i]);
 }
+
 console.log(newArr);
 
-const arr = [[1, 2, 3],[4, 5, 6]];
-console.log(arr.flat());
+const arr15 = [[1, 2, 3],[4, 5, 6]];
+console.log(arr15.flat());
 
 // Задание 10
 // Создайте массив с произвольными числами (диапазон от 
@@ -158,27 +149,27 @@ console.log(arr.flat());
 // for
 //  для перебора элементов и вычисления суммы. Учтите, что для последнего элемента нет последующего!
 
-const arr = [2, 9, 5, 7, 10];
+const arr8 = [2, 9, 5, 7, 10];
 for (let i = 0; i < arr.length; i++) {
-    // const summ = arr[i] + arr[i + 1];
+    // const summ = arr8[i] + arr8[i + 1];
     // console.log(summ);
-    if (arr[i + 1]){
-    console.log(arr[i] + arr[i + 1]);
+    if (arr8[i + 1]){
+    console.log(arr8[i] + arr8[i + 1]);
     }
 }
 
 // Задание 11
 // Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив квадратов этих чисел.
-function square(arr) {
-  return arr.map(item => item ** 2);
+function square(arr9) {
+  return arr9.map(item => item ** 2);
 }
 console.log(square([1, 2, 3]));
 
 // Задание 12
 // Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов.
 
-function strLenght(arr) {
-    return arr.map(item => item.length);
+function strLenght(arr10) {
+    return arr10.map(item => item.length);
 }
 console.log(strLenght(['Биба', 'и', 'Боба']));
 
@@ -192,8 +183,8 @@ console.log(strLenght(['Биба', 'и', 'Боба']));
 // filter()
 //  для создания нового массива на основе условия проверки отрицательности числа.
 
-function negativeValue(arr) {
-  return arr.filter(item => item < 0);
+function negativeValue(arr11) {
+  return arr11.filter(item => item < 0);
 }
 console.log(negativeValue([1, -5, 2, 3, -356]));
 
@@ -208,14 +199,14 @@ function randomNumb() {
     return Math.floor(Math.random() * 10);
 }
 
-let arr = [];
+let arr12 = [];
 for (let i = 0; i < 10; i++) {
-    arr.push(randomNumb());    
+    arr12.push(randomNumb());    
 }
 let evenArr = [];
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-    evenArr.push(arr[i]);
+for (let i = 0; i < arr12.length; i++) {
+    if (arr12[i] % 2 === 0) {
+    evenArr.push(arr12[i]);
     }
 }
 console.log(evenArr);
@@ -229,11 +220,11 @@ console.log(evenArr);
 function randomNumb() {
     return Math.floor(Math.random() * 10);
 }
-let arr = [];
+let arr14 = [];
 for (let i = 0; i < 6; i++) {
-    arr.push(randomNumb());    
+    arr14.push(randomNumb());    
 } 
-console.log(arr);  
-let sum = arr.reduce((total, num) => total + num);
-let average = sum / arr.length;
+console.log(arr14);  
+let sum = arr14.reduce((total, num) => total + num);
+let average = sum / arr14.length;
 console.log(average); 
