@@ -19,7 +19,29 @@ console.log(str.toUpperCase());
 //  и 
 // startsWith()
 //  для сравнения начала строк.
-
+function filterArray(array, string) {
+    // Преобразуем все строки в массиве в нижний регистр
+    const lowerCasedArray = array.map((item) => item.toLowerCase());
+  
+    // Создаём новый пустой массив для хранения результатов
+    const filteredArray = [];
+  
+    // Проходимся по каждому элементу массива
+    for (let i = 0; i < lowerCasedArray.length; i++) {
+      // Если элемент начинается с заданной строки (в нижнем регистре), добавляем его в новый массив
+      if (lowerCasedArray[i].startsWith(string.toLowerCase())) {
+        filteredArray.push(array[i]);
+      }
+    }
+  
+    return filteredArray;
+}
+const originalArray = ['hello world', 'world', 'Hello'];
+const searchString = 'hello';
+  
+const resultArray = filterArray(originalArray, searchString);
+  
+console.log(resultArray);
 
 // Задание 3
 // Округлить число 32.58884:
