@@ -1,185 +1,173 @@
-// Домашка 5
+// Домашка 8
+// Задание 1
+// С помощью метода массива 
+// sort
+//  отсортируйте массив 
+// people
+//  по возрастанию возраста и выведите результат в консоль.
 
-//Задание 1
-function minNumber(a, b) {
-    if (a < b) {
-      return a;
-    } 
-    else if (a = b) {
-      return a;
-    }
-    else {
-      return b;
-    }
+const people = [
+  { name: 'Глеб', age: 29 },
+  { name: 'Анна', age: 17 },
+  { name: 'Олег', age: 7 },
+  { name: 'Оксана', age: 47 }
+];
+
+// Допишите колбэк для sort, изучите, как работает колбэк, в документации
+console.log(people.sort((a, b) => a.age - b.age));
+// код выше должен вывеcти =>
+// [
+//  { name: 'Олег', age: 7 },
+//  { name: 'Анна', age: 17 },
+//  { name: 'Глеб', age: 29 },
+//  { name: 'Оксана', age: 47 }
+// ]
+
+
+// Критерии оценки
+// Подсказка
+// Помните, что метод 
+// sort
+//  принимает функцию сравнения в качестве аргумента. Эта функция должна принимать два элемента массива и возвращать значение < 0, если первый элемент должен быть перед вторым, и значение > 0, если второй элемент должен быть перед первым.
+
+// Задание 2
+// Реализуйте функцию 
+// filter
+// , которая должна работать аналогично методу массива 
+// filter
+// . Возьмите за основу функцию 
+// map
+// , которую мы реализовывали на уроке.
+
+// Чтобы из функции 
+// map
+//  сделать 
+// filter
+// , нужно, в зависимости от результата вызова 
+// ruleFunction
+// , принимать решение о том, добавлять в результирующий массив очередной элемент или нет.
+function filter(array, ruleFunction) {
+  const rezult = [];
+  for (let i = 0; i < array.length; i++) {
+     if (ruleFunction(array[i])) {
+        rezult.push(array[i])
+     }
+  }
+  return rezult;
 }
-// let rezult = minNumber(8, 4)
-// console.log(rezult);
-let rezult = minNumber(6, 6)
-console.log(rezult);
 
-//Задание 2
-function isEven(a) {
-    if (a % 2 === 0){
-        return 'Число чётное'
-    }
-    else {
-        return 'Число нечётное'
-    }   
+function isPositive(num) {
+  return num > 0;
 }
-console.log(isEven(33));
-console.log(isEven(42));
 
-const isOdd = (n) => (n % 2 === 0) ? 'Число четное' : 'Число нечётное';
-console.log(isOdd(33));
-console.log(isOdd(42));
+function isMale(person) {
+  return person.gender === 'male';
+}
 
+
+console.log(filter([3, -4, 1, 9], isPositive));
+
+const human = [
+  {name: 'Глеб', gender: 'male'},
+  {name: 'Анна', gender: 'female'},
+  {name: 'Олег', gender: 'male'},
+  {name: 'Оксана', gender: 'female'}
+];
+
+console.log(filter(human, isMale));
+
+
+// Критерии оценки
+// Работа будет оценена по следующим критериям
+// Функция 
+// filter
+//  реализована корректно, работает аналогично методу массива 
+// filter
+// , возвращает новый массив с элементами, для которых функция-правило возвращает 
+// true
+// .
+// Результат работы загружен на GitHub и отправлена ссылка на pull request.
+// Подсказка
+// Функция 
+// filter
+//  должна принимать массив и функцию-правило (которое возвращает 
+// true
+//  или 
+// false
+//  для каждого элемента), а возвращать — новый массив, который содержит только те элементы, для которых функция-правило возвращает 
+// true
+// .
 
 // Задание 3
-function square(number) {
-    console.log(number ** 2); 
+// Напишите программу, которая на протяжении 30 секунд каждые 3 секунды будет выводить в консоль текущую дату.
+//  Последней строкой должно выводиться сообщение «30 секунд прошло».
+
+
+// Критерии оценки
+// Подсказка
+// Используйте setInterval для повторяющихся задач и 
+// setTimeout для отложенного выполнения. Не забудьте очистить интервал после его выполнения.
+
+
+// const interval = setInterval(() => {
+//    console.log(new Date());
+// }, 3000);
+
+// setTimeout(() => {
+//    clearInterval(interval);
+//    console.log("30 секунд прошло");
+// }, 30000);
+
+// Задание 4
+// Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска.
+
+// Допишите функцию 
+// delayForSecond
+//  так, чтобы приветствие выводилось в консоль не сразу, а спустя 1 секунду. Используйте 
+// setTimeout
+// .
+
+function delayForSecond(callback) {
+ setTimeout(callback, 1000);
+ 
 }
-square(5);
-const up = (n) => n ** 2;
-console.log(up(5));
 
-
-//Задание 4
-function checkAge() {
-    let age = +(prompt('Сколько вам лет?'));
-    
-    if (age < 0) {
-        alert('Вы ввели неправильное значение');
-    }
-
-    else if (age >= 0 && age <= 12) {
-        alert('Привет, друг!');
-    }
-    
-    else{
-        alert('Добро пожаловать!'); 
-    }
-}
-checkAge();
+delayForSecond(function () {
+ console.log('Привет, Глеб!');
+})
 
 // Задание 5
-// Напишите функцию, которая принимает на вход два числа, а далее следует алгоритму:
+// Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
+// Подсказка
+// Обратите внимание на то, как передается функция 
+// sayHi
+//  в качестве аргумента в функцию 
+// delayForSecond
+// . Какие данные ожидает 
+// delayForSecond
+//  и какие она получает? Как можно изменить вызов 
+// delayForSecond
+//  так, чтобы он работал правильно? Каким образом можно передать аргумент в функцию 
+// sayHi
+// , если вызывать ее нужно уже внутри 
+// delayForSecond
+// ?
 
-// Проверяет, являются ли переданные параметры корректными числами.
-// Подсказка: используйте преобразование типов и 
-// isNaN().
-
-// Если нет — возвращает строку 
-// 'Одно или оба значения не являются числом'.
-// Если оба параметра — числа, то возвращает произведение данных чисел.
-function multiplyNumbers(a, b) {
-    if (isNaN(a) || isNaN(b)) {
-        return 'Одно или оба значения не являются числом';
-    } 
-    else {
-        return a * b;    
-    }
-}
-console.log(multiplyNumbers(25, 3));
-
-
-
-// Задание 6
-// Напишите функцию, которая выполняет следующий алгоритм:
-
-// Запрашивает у пользователя число.
-// Проверяет, является ли введенное значение числом.
-// Если значение не является числом, возвращает строку 
-// 'Переданный параметр не является числом'
-// .
-// Если значение является числом, возвращает строку 
-// 'n в кубе равняется <получившееся значение>'
-// , где 
-// n
-//  — введенное число, а 
-// <получившееся значение>
-//  — число, возведенное в куб.
-// Проверьте работу функции с числами от 
-// 0
-//  до 
-// 10
-// .
-function cubeNumber() {
-let num = prompt('Введите число')
-    if (isNaN(num)) {
-    alert('Переданный параметр не является числом');
-    }
-    else {
-    return ('${num} в кубе равняется ${n ** 3}');
-    }
-}
-console.log(cubeNumber(4));
-
-// Задание 7
-// Создайте два объекта, circle1 и circle2, каждый из 
-// которых имеет свойство radius.
-// Оба объекта должны иметь:
-// Метод getArea, который возвращает площадь круга, 
-// вычисляемую через радиус.
-// Метод getPerimeter, который возвращает периметр
-// окружности.
-function getArea(radius) {
-    return (Math.PI * this.radius ** 2);
-    }
-function getPerimeter(radius) {
-    return (2 * Math.PI * this.radius);
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+   setTimeout(() => {
+       console.log('Прошла одна секунда');
+       if(cb) {  cb(); }
+   }, 1000)
 }
 
-const circle1 = {
-    radius: 10,
-    methodGetArea: getArea,
-    methodGetPerimeter: getPerimeter,
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+   console.log(`Привет, ${name}!`);
 }
 
-const circle2 = {
-    r: 8,
-    methodGetArea: getArea,
-    methodGetPerimeter: getPerimeter,
-}
-console.log(circle1.methodGetArea());
-console.log(circle2.methodGetArea());
-console.log(circle1.methodGetPerimeter());
-console.log(circle2.methodGetPerimeter());
+// Код выше менять нельзя
 
-
-
-//Тенировка this
-function getRectangleArea() {
-    return this.width * this.height;
- }
- function getRectanglePerimeter() {
-    return this.width * 2 + this.height * 2;
- }
-const square1 = {
-    width: 22,
-    height: 11,
-    getArea: getRectangleArea,
-    getPerimeter: getRectanglePerimeter,
-}
-const square2 = {
-    width: 47,
-    height: 12,
-    getArea: getRectangleArea,
-    getPerimeter: getRectanglePerimeter,
-}
-console.log(square1.getArea());
-console.log(square1.getPerimeter());
-console.log(square2.getArea());
-console.log(square2.getPerimeter());
-
-
-
-//Задание из функции-  методы объектов
-const user = {
-    name: "Вова",
-    age: "38",
-    city: "Бильбао",
-    getInfo() {
-        return `Пользователь ${user.name}, возраст ${user.age} проживает в городе ${user.city}`;
-    }
-}    
-console.log(user.getInfo());
+// Нужно изменить код ниже:
+delayForSecond(() => sayHi('Глеб'));
