@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Montserrat;
+}
+
 h1 {
   font-family: Montserrat;
   font-size: 64px;
@@ -81,6 +89,7 @@ a {
   text-align: left;
 }
 .top-box__info {
+  max-width: 720px;
   color: rgb(32, 32, 39);
   font-family: Montserrat;
   font-size: 24px;
@@ -88,8 +97,16 @@ a {
   line-height: 32px;
 }
 
-.ticker {
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: rgb(188, 236, 48);
+  position: relative;
   margin-top: 156px;
+}
+
+.ticker {
+  width: 3220px;
   display: flex;
   flex-direction: row;
   gap: 51px;
@@ -104,9 +121,17 @@ a {
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
-  background: rgb(188, 236, 48);
+  animation: scroll-right 10s linear infinite;
 }
 
+@keyframes scroll-right {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .game-block {
   background: url(img/blackstars.svg), url(img/bigblackstar.svg), rgb(32, 32, 39);
   background-size: 71px 108px, 584.72px 584.72px, cover;
@@ -191,6 +216,10 @@ a {
   justify-content: center;
 }
 
+.card-small {
+  height: 473px;
+}
+
 .card-big {
   height: 551px;
 }
@@ -236,13 +265,12 @@ a {
 }
 
 .game-info {
-  width: 284px;
   padding: 48px;
   display: flex;
   flex-direction: column;
 }
 .game-info__subtitle {
-  width: 450px;
+  max-width: 450px;
 }
 .game-info__description {
   padding-top: 24px;
@@ -250,7 +278,6 @@ a {
   font-size: 24px;
   line-height: 32px;
   padding-bottom: 36px;
-  width: 400px;
   font-family: Montserrat;
 }
 .game-info__play {
@@ -386,4 +413,127 @@ footer {
     max-width: 100%;
     width: 285px;
   }
+}
+@media (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 393px);
+    padding-right: calc(50% - 393px);
+  }
+  .card {
+    width: 229px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+    background: rgb(255, 255, 255);
+    transition: 1s;
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
+  .card__img {
+    width: 100%;
+    border-radius: 30px;
+    background: rgb(173, 97, 255);
+  }
+  .card__info {
+    margin: 14px;
+    text-align: justify;
+  }
+  .card__subtitle {
+    font-size: 19px;
+    line-height: 23px;
+  }
+  .card__numb {
+    color: rgb(32, 32, 39);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    width: 108px;
+    height: 36px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-small {
+    height: 293px;
+  }
+  .card-big {
+    height: 342px;
+  }
+  .card-middle {
+    height: 318px;
+  }
+  .game__picture {
+    min-width: 331px;
+    min-height: 276px;
+  }
+  .game-info {
+    min-width: 278px;
+  }
+  .game-info__subtitle {
+    font-size: 27px;
+    max-width: 248px;
+  }
+  .game-info__description {
+    font-size: 17px;
+    line-height: 17px;
+  }
+}
+.simplemath {
+  font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.simpletask {
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  display: flex;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(48, 41, 41, 0.1);
+}
+
+input[type=text] {
+  margin: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 10px;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

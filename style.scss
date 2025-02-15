@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Montserrat;
 }
@@ -87,9 +90,16 @@ a {
     line-height: 32px;
    }
    
-   }
-.ticker {
+}
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: rgb(188, 236, 48);
+    position: relative;
     margin-top: 156px;
+}
+.ticker {
+    width: 3220px;
     display: flex;
     flex-direction: row;
     gap: 51px;
@@ -104,8 +114,15 @@ a {
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
-    background: rgb(188, 236, 48);
-
+    animation: scroll-right 10s linear infinite;
+}
+@keyframes scroll-right {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 .game-block {
     background: url(img/blackstars.svg), url(img/bigblackstar.svg), rgb(32, 32, 39);
@@ -191,6 +208,9 @@ a {
     
 
 }
+.card-small {
+    height: 473px;
+}
 .card-big {
     height: 551px;
 }
@@ -234,12 +254,11 @@ a {
     }
 }
 .game-info {
-    width: 284px;
     padding: 48px;
     display: flex;
     flex-direction: column;
     &__subtitle {
-        width: 450px;
+        max-width: 450px;
     }
     &__description {
         padding-top: 24px;
@@ -247,7 +266,7 @@ a {
         font-size: 24px;
         line-height: 32px;
         padding-bottom: 36px;
-        width: 400px;
+        // width: 400px;
         font-family: Montserrat;
     }
     &__play {
@@ -278,4 +297,5 @@ footer {
 
 }
 @import 'mobil';
+@import 'tablet';
 @import 'gamestyle';
