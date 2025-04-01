@@ -416,8 +416,8 @@ footer {
 }
 @media (max-width: 1024px) {
   .center {
-    padding-left: calc(50% - 393px);
-    padding-right: calc(50% - 393px);
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .card {
     width: 229px;
@@ -469,15 +469,19 @@ footer {
   .card-middle {
     height: 318px;
   }
+  .game {
+    width: 728px;
+    height: 303px;
+  }
   .game__picture {
-    min-width: 331px;
-    min-height: 276px;
+    width: 50%;
   }
   .game-info {
     min-width: 278px;
   }
   .game-info__subtitle {
     font-size: 27px;
+    line-height: 36px;
     max-width: 248px;
   }
   .game-info__description {

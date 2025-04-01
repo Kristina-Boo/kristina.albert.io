@@ -1,7 +1,7 @@
 @media (max-width: 1024px) {
     .center {
-        padding-left: calc(50% - 786px/2);
-        padding-right: calc(50% - 786px/2);
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .card {
@@ -60,9 +60,10 @@
     }
 
     .game {
+        width: 728px;
+        height: 303px;
         &__picture {
-            min-width: 331px;
-            min-height: 276px;
+            width: 50%;
 
         }
     }
@@ -70,6 +71,7 @@
         min-width: 278px;
         &__subtitle {
             font-size: 27px;
+            line-height: 36px;
             max-width: 248px;
         }
         &__description {
