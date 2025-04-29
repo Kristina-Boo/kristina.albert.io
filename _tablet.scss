@@ -1,0 +1,84 @@
+@media (max-width: 1024px) {
+    .center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card {
+        width: 229px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 30px;
+        box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+        background: rgb(255, 255, 255);
+        transition: 1s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &__img {
+            width: 100%;
+            border-radius: 30px;
+            background: rgb(173, 97, 255);
+        }
+        &__info {
+            // gap: 12px;
+            margin: 14px;
+            text-align: justify;
+        }
+        &__subtitle {
+            font-size: 19px;
+            line-height: 23px;
+        }
+        &__numb {
+            color: rgb(32, 32, 39);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 110%;
+            border-radius: 52.58px;
+            background: rgb(247, 247, 247);
+            width: 108px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+    
+    }
+    .card-small {
+        height: 293px;
+
+    }
+    .card-big {
+        height: 342px;
+    }
+    .card-middle {
+        height: 318px;
+    }
+
+    .game {
+        width: 728px;
+        height: 303px;
+        &__picture {
+            width: 50%;
+
+        }
+    }
+    .game-info {
+        min-width: 278px;
+        &__subtitle {
+            font-size: 27px;
+            line-height: 36px;
+            max-width: 248px;
+        }
+        &__description {
+            font-size: 17px;
+            line-height: 17px;
+        }
+    }
+
+
+}    
